@@ -1,0 +1,268 @@
+html{
+    font-size: 7px;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+
+
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #025296;
+    height:100px;
+    list-style: none;
+    margin: 0;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    list-style: none;
+    
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+a:hover {
+    color:#68a94a;
+}
+
+/* FIRST SECTION  */
+
+.first-section {
+    display: flex;
+    margin-bottom: 10rem;
+    /* gap: 10rmem;
+    margin-left: 5px; */
+}
+
+.text {
+    align-items: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+}
+
+.text > img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    border-radius: 30px;
+    border: 0.7rem solid #68a94a;
+    float: left;
+    margin-right: 50px;
+    
+}
+
+.text-container {
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: justify;
+    color: #025296;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 40px;
+    text-align: justify;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.download-cv {
+    font-size: 12px;
+    color: black;
+    background-color: rgb(202, 196, 196);
+    border: px solid #68a94a;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.download-cv:hover{
+    color: #68a94a;
+}
+span{
+    color: #68a94a;
+}
+
+
+/* SECOND SECTION */
+
+.second-section {
+    background-color: #025296;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    height: auto;
+
+}
+
+.second-section-heading {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 10rem;
+    
+}
+
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 7rem;
+    margin: 5rem auto;
+   
+}
+
+.consultation {
+    height: 40rem;
+    width: 30rem;
+    min-width: 25rem;
+    border-radius: 20px;
+    background-color: white;
+    border: 10px solid white;
+    background-image: url(./assets/pik1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delivery {
+    height: 40rem;
+    width: 30rem;
+    min-width: 25rem;
+    border-radius: 20px;
+    background-color: white;
+     border: 10px solid white;
+    background-image: url(./assets/pik2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.lab {
+    height: 40rem;
+    width: 30rem;
+    min-width: 25rem;
+    border-radius: 20px;
+    background-color: white;
+     border: 10px solid white;
+    background-image: url(./assets/pik4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.postpartum {
+    height: 40rem;
+    width: 30rem;
+    min-width: 25rem;
+    border-radius: 20px;
+    background-color: white;
+    border: 10px solid white;
+    background-image: url(./assets/pik3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Less than 1200px: Cards get slightly smaller height */
+@media (max-width: 1200px) {
+    .consultation, .delivery, .lab, .postpartum, .team {
+        height: 30rem; /* 210px, 7px from root times 30 */
+        flex-basis: 30rem;
+    }
+    .card {
+        max-width: 100rem; /* Shrink max-width of the grid to improve readabilry on large screens */
+    }
+}
+
+/* Less than 1040px: Cards get wider, potentially leading to fewer columns */
+@media (max-width: 1040px) {
+    .card {
+        gap: 4rem; 
+        max-width: 90rem; /* Adjust max-width of the grid for smaller screens */
+    }
+    .second-section-heading {
+        margin-left: 5rem;
+        margin-right: 5rem; 
+    }
+    .consultation, .delivery, .lab, .postpartum, .team {
+        height: 40rem;
+        width: 40rem; 
+        flex-basis: 40rem; /* Base width for single or two columns */
+        max-width: calc(100% - 2rem); /* Allow single column if screen is very narrow, or 2 columns if wide enough */
+    }
+}
+
+/* Less than 700px: Heading font size smaller, more compact layout */
+@media (max-width: 700px) {
+    .second-section-heading {
+        font-size: 3rem; 
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .card {
+        gap: 3rem;
+        padding: 0 1rem; /* ~7px - Smaller padding for very small screens */
+        max-width: unset; /* Remove max-width to allow full responsiveness within padding */
+    }
+    .consultation, .delivery, .lab, .postpartum, .team {
+        flex-basis: 100%; /* Ensure single column */
+        max-width: 45rem; /* Max width for single column cards */
+        height: 30rem; 
+    }
+}
+
+/* Less than 600px: Cards become single column, centered */
+@media (max-width: 600px) {
+    .card {
+        justify-content: center; /* Ensures the single column is centered */
+        align-items: center; /* Centers items horizontally within their space */
+        align-content: center; /* Centers the block of content vertically (if .second-section has extra height) */
+        gap: 2rem; 
+    }
+    .second-section-heading {
+        text-align: center;
+        line-height: 35px;
+        margin-left: 1rem; 
+        margin-right: 1rem; 
+    }
+}
+
+/* --- Footer --- */
+footer {
+    height: 30rem; 
+    background-color: lightgray; 
+
+}
